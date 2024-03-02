@@ -13,6 +13,7 @@ export const GlobalStyles = createGlobalStyle`
         scroll-behavior: smooth;
         color: ${({theme}) => theme.colors.white};
         background: ${({theme}) => theme.colors.black};
+        font-size: 12px;
     }
 
     a{
