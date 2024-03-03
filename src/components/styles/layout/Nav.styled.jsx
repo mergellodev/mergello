@@ -25,6 +25,7 @@ export const Nav = styled.nav`
     z-index: 98;
     transition: all 1s ease-in-out;
     background: rgba(2, 12, 27, 0.8);
+    top: ${({scrollDirection}) => scrollDirection === "down" ? "-80px" : "0px"}
 `
 export const Logo = styled.img`
     width: 100px;
@@ -32,9 +33,9 @@ export const Logo = styled.img`
 `
 export const MenuIcon = styled.div`
     cursor: pointer;
-    /* background: ${({theme}) => theme.colors.lightNavyBlue}; */
+    background: ${({theme}) => theme.colors.lightNavyBlue};
     padding: 0.7rem;
-    border-radius: 5px;
+    border-radius: 35px;
     display: none;
     position: absolute;
     right: 20px;
@@ -115,7 +116,7 @@ export const NavItemStyled = styled.li`
     }
 `
 export const NavLink = styled.a`
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: ${({theme}) => theme.colors.white};
     letter-spacing: 1.5px;
 
@@ -133,4 +134,45 @@ export const NavLink = styled.a`
             width: 100%;
         }
     }
+`
+export const Profile = styled.div`
+    display: none;
+
+    @media(max-width: ${({theme}) => theme.mobile}) {
+        display: flex;
+        direction: column;
+        align-items: center;        
+
+        img{
+            height: 7rem;
+            width: auto;
+            border-radius: 50%;
+            display: block;
+            margin: 1.8rem 0;
+            transition: all ease-in-out 300ms;          
+        }
+
+        &:hover{            
+            img{
+                transform: scale(1.05);
+            }          
+        }
+        
+    }
+`
+export const SocialIcons = styled.div`
+    display: none;
+
+    @media(max-width: ${({theme}) => theme.mobile}) {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        a{
+            margin: 0 0.5rem;
+            font-size: 2rem;
+        }        
+    }
+
 `
