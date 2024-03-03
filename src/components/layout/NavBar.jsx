@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Nav, Logo, MenuIcon, LineOne, LineTwo, LineThree, NavList } from "../styles/layout/Nav.styled"
+import { NavItems } from "../../data/NavItems"
+import { Nav, Logo, MenuIcon, LineOne, LineTwo, LineThree, NavList, NavItemStyled, NavLink } from "../styles/layout/Nav.styled"
 
 const NavBar = () => {
 
@@ -19,8 +20,16 @@ const NavBar = () => {
               <LineThree menuOpen={menuOpen}/>
             </MenuIcon>
             <NavList menuOpen={menuOpen}>
-              <li>About</li>
-              <li>Services</li>
+              {NavItems && NavItems.map((navItem, index) => (
+                <NavItemStyled 
+                  key={index} 
+                  index={index} 
+                  menuOpen={menuOpen} 
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <NavLink href="">About</NavLink>                  
+                </NavItemStyled>  
+              ))}
             </NavList>
         </Nav>
     </>
