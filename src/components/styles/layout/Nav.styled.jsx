@@ -25,7 +25,7 @@ export const Nav = styled.nav`
     z-index: 98;
     transition: all 1s ease-in-out;
     background: rgba(2, 12, 27, 0.8);
-    top: ${({scrollDirection}) => scrollDirection === "down" ? "-80px" : "0px"}
+    top: ${({scrollDirection}) => scrollDirection === "down" ? "-80px" : "0px"};
 `
 export const Logo = styled.img`
     width: 100px;
@@ -46,40 +46,27 @@ export const MenuIcon = styled.div`
     }
 `
 export const LineOne = styled.div`
-    width: 15px;
+    width: 30px;
     height: 3px;
     margin: 5px 0px;
-    background: linear-gradient(
-        135deg,
-        rgba(249, 105, 14, 1) 0%,
-        rgba(255, 255, 255, 1) 100%
-    );    
+    background: ${({ theme }) => theme.colors.white};
     transition: ${({theme}) => theme.transition};
-    transform: ${({menuOpen}) => menuOpen ? "rotate(-45deg) translate(-5px, 6px) scaleX(2)" : "none"};
+    transform: ${({menuOpen}) => menuOpen ? "rotate(-45deg) translate(-5px, 6px) scaleX(1)" : "none"};
 `
 export const LineTwo = styled.div`
     width: 30px;
     height: 3px;
     margin: 5px 0px;
-    background: linear-gradient(
-        135deg,
-        rgba(249, 105, 14, 1) 0%,
-        rgba(255, 255, 255, 1) 100% 
-    );
+    background: ${({ theme }) => theme.colors.white};
     opacity: ${({menuOpen}) => menuOpen ? 0 : 1};    
 `
 export const LineThree = styled.div`
-    width: 15px;
+    width: 30px;
     height: 3px;
-    margin: 5px 0px;
-    margin-left: ${({menuOpen}) => menuOpen ? 0 : "15px"};
-    background: linear-gradient(
-        135deg,
-        rgba(249, 105, 14, 1) 0%,
-        rgba(255, 255, 255, 1) 100% 
-    );    
+    margin: 5px 0px;    
+    background: ${({ theme }) => theme.colors.white};    
     transition: ${({theme}) => theme.transition};
-    transform: ${({menuOpen}) => menuOpen ? "rotate(45deg) translate(-5px, -6px) scaleX(2)" : "none"};
+    transform: ${({menuOpen}) => menuOpen ? "rotate(45deg) translate(-5px, -6px) scaleX(1)" : "none"};
 `
 export const NavList = styled.ul`
     display: flex;

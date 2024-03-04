@@ -23,9 +23,9 @@ const NavBar = () => {
               menuOpen={menuOpen} 
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              <LineOne menuOpen={menuOpen}/>
-              <LineTwo menuOpen={menuOpen}/>
-              <LineThree menuOpen={menuOpen}/>
+              <LineOne menuOpen={menuOpen}/>              
+              <LineTwo menuOpen={menuOpen}/>              
+              <LineThree menuOpen={menuOpen}/>              
             </MenuIcon>
             <NavList menuOpen={menuOpen}>
               {NavItems && NavItems.map((navItem, index) => (

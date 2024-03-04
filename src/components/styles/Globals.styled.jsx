@@ -16,9 +16,9 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 12px;
     }
 
-    body{
+    /* body{
         height: 200vh;
-    }
+    } */
 
     a{
         text-decoration: none;
