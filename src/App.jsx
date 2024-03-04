@@ -3,12 +3,14 @@ import { ThemeProvider } from 'styled-components'
 import StyledButton, { FancyButton } from './components/Button/Button'
 import { GlobalStyles } from './components/styles/Globals.styled'
 import NavBar from './components/layout/NavBar'
+import { HeroSection } from './components/sections/HeroSection'
 
 function App() {  
 
   const theme = {
     colors: {
       white: "rgba(240, 247, 255, 1)",
+      bluewhite: "#d1d6ee",
       navyBlue: "rgba(2, 12, 27, 1)",
       lightNavyBlue: "rgba(4, 22, 48, 1)",
       green: "rgba(0, 206, 158, 1)",
@@ -25,7 +27,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <NavBar />
-        
+        <HeroSection />
         <div>
           <h1>Let's build things together !!</h1>          
           <hr />
